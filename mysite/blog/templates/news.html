@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Source+Serif+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'img/logo.png'%}" type="image/x-icon"/>
+
+    <title>Smart City</title>
+</head>
+
+<body class="bg-light">      
+        <!-- navbar -->
+        <nav class="nav navbar navbar-expand-md shadow-lg shadow-lg fixed-top">
+            <div class="container"> 
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <p class="d-inline ml-1">Smart City</p>
+                </a>
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-caret-down white" aria-hidden="true"></i>
+                </button>
+                <div class="collapse  navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news' %}"> <p>News</p> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'eventos' %}"> <p>Events</p> </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- fim da navbar -->
+        
+        <!-- News --> 
+        <section id="news" class="distancia-nav mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto ">
+                        <div class="post-preview text-center mt-5">
+                            <h1 class="post-subtitle">News</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-light mb-2">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 mx-auto">
+                        <div class="post-preview text-center ">
+                            <h3 class="post-subtitle">Know and feel what is happening!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% for post in posts %}
+            <div class="container tamanho-imagem overflow-hidden">
+                <hr>
+                <div class="row">
+                    <img class=" img-fluid" src="{{ post.bannerEvento.url }}" alt="" >
+            </div>
+            </div>
+            <div class="container bg-light">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 mx-auto ">
+                        <div class="post-preview my-5">
+                            <a href="">
+                                <h2 class="post-title">{{ post.titulo }}</h2>
+                                <h3 class="post-subtitle">{{ post.textoCorpo }}</h3>
+                                <p class="post-meta"> {{ post.dataHoraEvento }} </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        
+        
+        
+        <!-- Footer --> 
+        <div class="container-fluid dark ">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto ">
+                    <div class="post-preview text-center mt-4 mb-0">
+                        <p class="white">© 2020 Do pão company. All rights reserved.</p>
+                    </div>           
+                </div>
+            </div>   
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
