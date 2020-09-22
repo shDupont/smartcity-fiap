@@ -10,8 +10,6 @@ body{
 .dark{
     color: #fefefe;
     background-color: #111111;
-
-
 }
 
 .navbar {
@@ -40,7 +38,6 @@ nav a p {
     margin-top: 10vh;
 }
 
-
 a img{
     color: #fefefe;
 }
@@ -52,8 +49,6 @@ a img{
 .tamanho-imagem{
     height: 40vh;
 }
-
-
 
 .nav{
     height: 8vh;
@@ -73,6 +68,10 @@ a img{
     background-size: cover;
 }
 
+.img-fluid {
+        height: 55vh;
+        width: auto;
+    }
 
 .container-fluid {
     position: relative;
@@ -165,12 +164,9 @@ h3 {
         animation: caret 1s steps(1) infinite;
        
     }
-  
     .post-preview>a>.post-title {
         font-size: 36px;
     }
-    
-
 }
 
 @keyframes caret{
