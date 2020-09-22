@@ -68,11 +68,6 @@ a img{
     background-size: cover;
 }
 
-.img-fluid {
-        height: 55vh;
-        width: auto;
-    }
-
 .container-fluid {
     position: relative;
     text-align: center;
