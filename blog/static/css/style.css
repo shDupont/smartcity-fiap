@@ -46,10 +46,6 @@ a img{
     height: 20vh;
 }
 
-.tamanho-imagem{
-    height: 40vh;
-}
-
 .nav{
     height: 8vh;
     background-color: #0D0D0D;
@@ -137,11 +133,6 @@ h3 {
     nav{
         direction: rtl;
     }
-
-    .tamanho.imagem{
-        height: none;
-    }
-
     h2 {
     font-size: 30px;
     margin-top: 10px;
@@ -158,6 +149,9 @@ h3 {
     }
     .margin-left{
         margin-left: 72vh;
+    }
+    .tamanho.imagem{
+        height: 50vh;
     }
     .type{
         font-family: 'Raleway', sans-serif;
