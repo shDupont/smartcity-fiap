@@ -46,9 +46,7 @@ a img{
     height: 20vh;
 }
 
-.tamanho-imagem{
-    height: 100%;
-}
+
 
 .nav{
     height: 8vh;
@@ -142,6 +140,9 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Raleway', sans-serif;
+    }
+    .tamanho-imagem{
+    height: 35vh;
 }
 }
 
@@ -154,7 +155,7 @@ h3 {
     .margin-left{
         margin-left: 72vh;
     }
-    .tamanho.imagem{
+    .tamanho-imagem{
         height: 50vh;
     }
     .type{
