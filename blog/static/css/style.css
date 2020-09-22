@@ -46,6 +46,10 @@ a img{
     height: 20vh;
 }
 
+.tamanho-imagem{
+    height: 100%;
+}
+
 .nav{
     height: 8vh;
     background-color: #0D0D0D;
