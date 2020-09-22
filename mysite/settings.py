@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/blog/media/'
+MEDIA_ROOT = django_heroku.os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 
 MEDIA_URL = '/media/'
 
