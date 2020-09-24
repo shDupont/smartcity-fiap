@@ -11,7 +11,7 @@ class Usuario(models.Model):
 
 class Post(models.Model):
     titulo = models.CharField(max_length=60)
-    textoCorpo = models.CharField(max_length=240)
+    textoCorpo = models.CharField(max_length=2000)
     dataHoraEvento = models.DateTimeField(editable=True, default=django.utils.timezone.now)
     bannerEvento = models.ImageField(upload_to='blog/media')
 
